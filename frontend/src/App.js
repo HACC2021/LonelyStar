@@ -2,13 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import {Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar';
+import LandingPage from './components/LandingPage';
 
 
 function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <header className="App-header">
+      <LandingPage></LandingPage>
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,17 +24,17 @@ function App() {
         >
           Learn React
         </a>
-        <div>
+        <div> */}
+        {/* </div>
 
-          {/* uncomment when needed */}
+      </header> */}
+
+          {/* ---------------- uncomment when needed -------------------------------- */}
           {/* <Switch> */}
             {/* <Route path="products" component = {Products}></Route> */}
             {/* <Route path="products" component = {Products}></Route> */}
             {/* <Route path="products" component = {Products}></Route> */}
           {/* </Switch> */}
-        </div>
-
-      </header>
     </div>
   );
 }

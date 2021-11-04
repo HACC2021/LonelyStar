@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
-
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -26,7 +25,7 @@ class NavBar extends Component {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
+                        <Nav.Link href="#deets">More deets </Nav.Link>
                         <Nav.Link eventKey={2} href="#memes">
                             Dank memes
                         </Nav.Link>
@@ -34,12 +33,6 @@ class NavBar extends Component {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
-
-
-
-
-
         );
     }
 }
