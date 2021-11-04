@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Header } from './landingPage/header';
 import { Button } from 'react-bootstrap';
 import "../App.css"
 
