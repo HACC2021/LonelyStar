@@ -8,7 +8,6 @@ class LandingPage extends Component {
         this.state = {  }
     }
 
-
     render() { 
         return (  
             // <Header data={JsonData.Header}></Header>
