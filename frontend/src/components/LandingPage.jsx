@@ -27,7 +27,7 @@ class LandingPage extends Component {
                 alt=""
               /> */}
               <div className="intro-button">
-                <a href="">Get Started</a>
+                <a href="chat">Chat with OHABot</a>
               </div>
             </div>
       
@@ -35,7 +35,9 @@ class LandingPage extends Component {
               header {
                 margin-bottom: 1rem;
                 height: 100vh;
-                background-image: linear-gradient(red, yellow);
+                // background-image: linear-gradient(red, yellow);
+                background: rgb(238,174,202);
+                background: linear-gradient(6deg, rgba(238,174,202,1) 0%, rgba(196,183,81,1) 0%, rgba(148,187,233,1) 100%);
               }
               .intro-logo {
                 display: flex;
