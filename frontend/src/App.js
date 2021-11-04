@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <Route path="products" component = {Products}></Route>
+          <Route path="products" component = {Products}></Route>
+          <Route path="products" component = {Products}></Route>
+        </div>
+
       </header>
     </div>
   );
