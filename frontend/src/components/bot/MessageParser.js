@@ -8,3 +8,5 @@ class MessageParser {
       console.log(message);
     }
   }
+
+export default MessageParser;

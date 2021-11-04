@@ -1,15 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 import NavBar from './components/NavBar';
 import LandingPage from './components/LandingPage';
-
+import ChatPage from './components/ChatPage';
 
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
-      <LandingPage></LandingPage>
+      {/* <NavBar></NavBar> */}
+      <NavBar /> 
+        <Routes> 
+          <Route path="chat" component = {ChatPage}></Route>
+          <Route path="home" component = {<LandingPage />}></Route>
+          <Route path="/" exact component = {<LandingPage />}></Route>
+        </Routes>
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -30,11 +35,6 @@ function App() {
       </header> */}
 
           {/* ---------------- uncomment when needed -------------------------------- */}
-          {/* <Switch> */}
-            {/* <Route path="products" component = {Products}></Route> */}
-            {/* <Route path="products" component = {Products}></Route> */}
-            {/* <Route path="products" component = {Products}></Route> */}
-          {/* </Switch> */}
     </div>
   );
 }
