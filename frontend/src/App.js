@@ -19,9 +19,13 @@ function App() {
           Learn React
         </a>
         <div>
-          <Route path="products" component = {Products}></Route>
-          <Route path="products" component = {Products}></Route>
-          <Route path="products" component = {Products}></Route>
+
+          {/* uncomment when needed */}
+          {/* <Switch> */}
+            {/* <Route path="products" component = {Products}></Route> */}
+            {/* <Route path="products" component = {Products}></Route> */}
+            {/* <Route path="products" component = {Products}></Route> */}
+          {/* </Switch> */}
         </div>
 
       </header>
