@@ -5,6 +5,9 @@ class MessageParser {
     }
   
     parse(message) {
+      // if (message.includes('hello')) {
+      //   this.actionProvider.handleHello();
+      // }
       console.log(message);
     }
   }

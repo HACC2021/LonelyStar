@@ -1,9 +1,18 @@
 class ActionProvider {
-    constructor(createChatbotMessage, setStateFunc, createClientMessage) {
-      this.createChatbotMessage = createChatbotMessage;
-      this.setState = setStateFunc;
-      this.createClientMessage = createClientMessage;
-    }
+  constructor(createChatbotMessage, setStateFunc, createClientMessage) {
+    this.createChatbotMessage = createChatbotMessage;
+    this.setState = setStateFunc;
+    this.createClientMessage = createClientMessage;
   }
-  
-  export default ActionProvider;
+
+  handleHello() {
+    const botMessage = this.createChatBotmessage('Hello. Nice to meet you.');
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  }
+}
+
+export default ActionProvider;

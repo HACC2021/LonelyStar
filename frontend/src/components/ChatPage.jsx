@@ -18,7 +18,6 @@ class ChatPage extends Component {
                 messageParser={MessageParser}
                 actionProvider={ActionProvider}
                 />
-                <h1>sup</h1>
              </div>
         );
     }

@@ -10,12 +10,12 @@ class NavBar extends Component {
         return (  
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="">OHABot</Navbar.Brand>
+                    <Navbar.Brand href="/">OHABot</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="">Home</Nav.Link>
-                        <Nav.Link href="#link">Chat</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/chat">Chat</Nav.Link>
                         <NavDropdown title="More" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
