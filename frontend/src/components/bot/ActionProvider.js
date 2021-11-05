@@ -6,7 +6,23 @@ class ActionProvider {
   }
 
   handleHello() {
-    const botMessage = this.createChatBotmessage('Hello. Nice to meet you.');
+    const botMessage = this.createChatbotMessage('Hello. Nice to meet you.');
+
+    this.setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  }
+
+  handleDog() {
+    const botMessage = this.createChatbotMessage(
+      "Here's a nice dog picture for you!",
+      {
+        widget: 'dogPicture',
+      }
+    );
+
+    console.log('woofwoof')
 
     this.setState((prev) => ({
       ...prev,
