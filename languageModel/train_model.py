@@ -31,9 +31,9 @@ embedding_dim = 300
 MODEL_NAME =  '../input/huggingface-roberta-variants/distilroberta-base/distilroberta-base'
 
 # LOAD DATAFRAME
-df = pd.read_csv('../input/ohabotdata/OHABotData.csv',sep=',').sample(frac = 1)
+df = pd.read_csv('OHABotData.csv',sep=',').sample(frac = 1)
 df = df.dropna()
-df = df.astype({"Questions": str, "Answers": int})
+df = df.astype({"Questions ": str, "Answers": int})
 
 # OHA DATASET
 class OHADataset(Dataset):
