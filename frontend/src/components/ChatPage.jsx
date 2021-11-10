@@ -12,12 +12,22 @@ class ChatPage extends Component {
     }
     render() { 
         return (  
-            <div>
+            <div className="container">
                 <Chatbot
                 config={config}
                 messageParser={MessageParser}
                 actionProvider={ActionProvider}
+                disableScrollToBottom={true}
                 />
+
+                <style jsx>{`
+                .container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // background-image: linear-gradient(red, yellow);
+                }
+                `}</style>
              </div>
         );
     }

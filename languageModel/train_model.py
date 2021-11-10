@@ -28,7 +28,7 @@ num_classes = 13
 batch_size = 16
 epochs = 35 # The number of epochs
 embedding_dim = 300
-MODEL_NAME =  '../input/huggingface-roberta-variants/distilroberta-base/distilroberta-base'
+MODEL_NAME =  'distilroberta-base'
 
 # LOAD DATAFRAME
 df = pd.read_csv('OHABotData.csv',sep=',').sample(frac = 1)
@@ -65,16 +65,16 @@ class OHAModel(nn.Module):
     
 
     def forward(self,xb):
+        # x = self.bert(**xb)[1]
         x = self.bert(**xb)[1]
+        # print(f'x shape is {x.size()}')
         x = self.dropout(x)
         x = self.linear(x)
         x = self.logSoftmax(x)
         return x
     
     
-
 model = OHAModel(MODEL_NAME).to(device)
-torch.save(model.state_dict(), 'initialModel')
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 # DEFINING THE TRAIN AND EVAl 
@@ -151,14 +151,35 @@ def evaluate(eval_model):
 torch.save(model, 'OHABotModel')
 
 
-while True:
-    with torch.no_grad():
-        query = input()
-        data = tokenizer.encode_plus(query,pad_to_max_length='max_length', return_tensors='pt').to(device)
-#         output = nn.Softmax()(model(data)).cpu()
-        output = model(data).cpu()
-        print(output)
-        pred = np.argmax(np.array(output))
-        print(2 ** output[0][pred])
-        print(pred)
+# TRAINING!!!!!
+
+train_data = OHADataset(df)
+train_loader = DataLoader(train_data, batch_size = batch_size, shuffle = True)
+
+
+
+for epoch in range(1, epochs + 1):
+        print('-' * 89)
+        print(f'Starting epoch {epoch}')
+        epoch_start_time = time.time()
+        train_loss = train(model)
+        print(f'| end of epoch: {epoch} | time: {time.time() - epoch_start_time}s  | train loss: {train_loss} |')
+        print('-' * 89)
+
+
+torch.save(model, 'OHABotModel')
+torch.save(model.state_dict(), '../backend/ml/OHABotModelWeights')
+
+# For testing purposes
+# model.eval()
+# while True:
+#     with torch.no_grad():
+#         query = input('Please enter a question')
+#         data = tokenizer.encode_plus(query,pad_to_max_length='max_length', return_tensors='pt').to(device)
+# #         output = nn.Softmax()(model(data)).cpu()
+#         output = model(data).cpu()
+#         print(output)
+#         pred = np.argmax(np.array(output))
+#         print(2 ** output[0][pred])
+#         print(pred)
     

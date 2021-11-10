@@ -12,6 +12,7 @@ torchvision = "*"
 torchaudio = "*"
 transformers = "*"
 pandas = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
