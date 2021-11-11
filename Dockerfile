@@ -10,7 +10,7 @@ RUN  apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y \
-curl && apt-get install -y unzip
+curl && apt-get install -y unzip && apt-get install -y p7zip-full
 
 
 
@@ -29,7 +29,7 @@ RUN npm --version
 COPY . .
 RUN pip install -r requirements.txt
 RUN wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1B4VyZPQ0GGeInMErYzeYI7KgjbMhgKMv' -O ./backend/ml/OHABotModelWeights
-RUN cd ./backend/ml && unzip OHABotModelWeights
+# RUN cd ./backend/ml && 7z x OHABotModelWeights
 RUN cd frontend && npm install 
 
 
