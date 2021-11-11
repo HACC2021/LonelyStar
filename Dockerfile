@@ -10,10 +10,11 @@ RUN  apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y \
-curl
+curl && apt-get install -y unzip
+
+
 
 # installing node
-
 ENV NODE_VERSION=16.13.0
 # RUN apt install -y curl
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
@@ -28,6 +29,7 @@ RUN npm --version
 COPY . .
 RUN pip install -r requirements.txt
 RUN wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1B4VyZPQ0GGeInMErYzeYI7KgjbMhgKMv' -O ./backend/ml/OHABotModelWeights
+RUN cd ./backend/ml && unzip OHABotModelWeights
 RUN cd frontend && npm install 
 
 
