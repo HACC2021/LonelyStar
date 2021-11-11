@@ -28,7 +28,7 @@ RUN npm --version
 
 COPY . .
 RUN pip install -r requirements.txt
-RUN wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1B4VyZPQ0GGeInMErYzeYI7KgjbMhgKMv' -O ./backend/ml/OHABotModelWeights
+# RUN wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1B4VyZPQ0GGeInMErYzeYI7KgjbMhgKMv' -O ./backend/ml/OHABotModelWeights
 # RUN cd ./backend/ml && 7z x OHABotModelWeights
 RUN cd frontend && npm install 
 
