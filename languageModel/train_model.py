@@ -33,7 +33,7 @@ MODEL_NAME =  'distilroberta-base'
 # LOAD DATAFRAME
 df = pd.read_csv('OHABotData.csv',sep=',').sample(frac = 1)
 df = df.dropna()
-df = df.astype({"Questions ": str, "Answers": int})
+df = df.astype({"Questions": str, "Answers": int})
 
 # OHA DATASET
 class OHADataset(Dataset):
@@ -111,7 +111,8 @@ def train(model):
         data = tokenizer.batch_encode_plus([*data],pad_to_max_length='max_length', return_tensors='pt').to(device)
         final_output = model(data)
         targets = targets.to(device)
-        final_output = torch.squeeze(final_output.float())
+        # final_output = torch.squeeze(final_output.float())
+        final_output = final_output.float()
         loss = criterion(final_output, targets)
 
 
