@@ -1,8 +1,8 @@
-"Questions ",Answers,My label
+"Questions",Answers,My label
 "How do apply for OHA scholarship?",1,Scholarships
 "Do you guys have any scholarships?",1,Scholarships
 "Can I apply for the scholarship?",1,Scholarships
-" What are the requirements for the scholarship?",1,Scholarships
+"What are the requirements for the scholarship?",1,Scholarships
 "Who is elibile for the OHA scholarship?",1,Scholarships
 "Are there any funds available for students?",1,Scholarships
 "Can OHA help with college?",1,Scholarships
@@ -40,14 +40,14 @@
 "How do I apply for the Hau Kanu business loan?",4,Business loans
 "How do I apply for the Hau Kanu loans?",4,Business loans
 "I need a personal loan",5,Personal Loans
-"I need a loan for myself ",5,Personal Loans
+"I need a loan for myself",5,Personal Loans
 "Do you guys have personal loans?",5,Personal Loans
-"What are the requirements for personal loans ",5,Personal Loans
+"What are the requirements for personal loans",5,Personal Loans
 "Can I get a personal loan?",5,Personal Loans
 "I need help paying my debt",5,Personal Loans
 "Do you have loans for home improvement?",5,Personal Loans
 "I am in debt, is there any way you can help?",5,Personal Loans
-"How do I apply for OHA emergency financial assistance? ",6,Emergency financial assitance
+"How do I apply for OHA emergency financial assistance?",6,Emergency financial assitance
 "Do you have a program for emergency assistance?",6,Emergency financial assitance
 "I need emergency assistance",6,Emergency financial assitance
 "I need financial assistance",6,Emergency financial assitance
@@ -71,7 +71,7 @@
 "Does OHA have a newspaper?",8,Connect with OHA
 "How do I stay updated?",8,Connect with OHA
 "How can I learn about upcoming events?",8,Connect with OHA
-"How can I learn about upcoming OHA events? ",8,Connect with OHA
+"How can I learn about upcoming OHA events?",8,Connect with OHA
 "How can I apply for a job at OHA?",9,Careers at OHA
 "Do you have any job openings?",9,Careers at OHA
 "I need help getting a job",9,Careers at OHA
