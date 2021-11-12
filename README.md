@@ -21,16 +21,16 @@ cd LonelyStar
 ```
 
 <br><br>
-At this step, please make sure to have docker. We will now build the docker image of the project.
-```
-docker build -t lonelystar .
-```
-
-<br><br>
-Finally, the script included will start both the client and the server. This might take a few minutes as it also trains the model locally.
+At this step, please make sure to have docker and bash. The startup script will now handle starting the project. This is gonna take a while so please relax and maybe enjoy some coffee for a few min and come back.
 ```
 bash project_startup.sh
 ```
+
+<!-- <br><br>
+Finally, the script included will start both the client and the server. This might take a few minutes as it also trains the model locally.
+```
+bash project_startup.sh
+``` -->
 
 <br><br>
 At this point, the project should now be running and you can access the prototype in your browser at <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>
