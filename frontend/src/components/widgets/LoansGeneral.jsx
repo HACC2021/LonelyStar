@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Button,Popover, OverlayTrigger} from 'react-bootstrap'
 import BusinessLoans from './BusinessLoans';
 import EmergencyFinancialAssistance from './EmergencyFinancialAssistance';
+import LoanBalance from './LoanBalance';
 import PersonalLoans from './PersonalLoans';
 
 class LoansGeneral extends Component {
@@ -37,6 +38,15 @@ class LoansGeneral extends Component {
             </Popover>
           );
 
+        const balancePopover = (
+            <Popover id="popover-basic">
+              <Popover.Header as="h3">Check your loan balance</Popover.Header>
+              <Popover.Body>
+                  <LoanBalance/>
+              </Popover.Body>
+            </Popover>
+          );
+
         return (
             <div>
                 <OverlayTrigger trigger="click" rootClose placement="left" overlay={businessPopover}>
@@ -49,6 +59,10 @@ class LoansGeneral extends Component {
 
                 <OverlayTrigger trigger="click" rootClose placement="right" overlay={emergencyPopover}>
                     <Button variant="success">Emergency Loans</Button>
+                </OverlayTrigger>
+
+                <OverlayTrigger trigger="click" rootClose placement="right" overlay={balancePopover}>
+                    <Button variant="success">Check loan balance</Button>
                 </OverlayTrigger>
 
                 {/* <Button variant="secondary" size="lg">
