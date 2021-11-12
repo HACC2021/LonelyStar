@@ -27,7 +27,7 @@ docker build -t lonelystar .
 ```
 
 <br><br>
-Finally, the script included will start both the client and the server.
+Finally, the script included will start both the client and the server. This might take a few minutes as it also trains the model locally.
 ```
 bash project_startup.sh
 ```
