@@ -13,6 +13,8 @@ torchaudio = "*"
 transformers = "*"
 pandas = "*"
 django-cors-headers = "*"
+django-heroku = "*"
+gunicorn = "*"
 
 [dev-packages]
 
