@@ -23,7 +23,9 @@ def seed_everything(seed=1234):
 seed_everything(seed=1326)
 
 # HYPERPARAMETERS
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# Needs to be trained on cpu becuase docker breaks when its not
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device('cpu')
 num_classes = 13
 batch_size = 16
 epochs = 35 # The number of epochs

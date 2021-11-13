@@ -16,7 +16,9 @@ import os
 
 
 logging.set_verbosity_error()
+# Cpu inference only because docker breaks when checking for Cuda. Will fix later
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device('cpu')
 num_classes = 13
 # batch_size = 16
 # epochs = 35 # The number of epochs
@@ -77,7 +79,8 @@ model = OHAModel(MODEL_NAME).to(device)
 
 # print(os.getcwd())
 
-model.load_state_dict(torch.load('./ml/OHABotModelWeights'), map_location=device)
+# print(f'device is {device} !!!!!!!!!!!!!!!!!!!!!!!!!!')
+model.load_state_dict(torch.load('./ml/OHABotModelWeights', map_location=device))
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model.eval()
 
